@@ -77,10 +77,6 @@ const services = [
 
 const technologies = [
   {
-    name: "Data Scientist",
-    icon: data,
-  },
-  {
     name: "Machine Learning",
     icon: machine,
   },
@@ -108,23 +104,6 @@ const technologies = [
     name: "SQL",
     icon: sql,
   },
-  {
-    name: "LLM",
-    icon: llm,
-  },
-  {
-    name: "RAG",
-    icon: rag,
-  },
-  {
-    name: "Time Series Forecasting",
-    icon: time,
-  },
-  {
-    name: "Probability",
-    icon: prob,
-  },
-
   {
     name: "snowflake",
     icon: snowflake,
