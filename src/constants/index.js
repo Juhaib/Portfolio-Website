@@ -23,22 +23,6 @@ import {
   jobit,
   tripguide,
   threejs,
-  excel,
-  lead,
-  functionup,
-  data,
-  tensorflow,
-  keras,
-  sckit,
-  jupyter,
-  ai,
-  machine,
-  sql,
-  llm,
-  time,
-  rag,
-  snowflake,
-  prob
 } from "../assets";
 
 export const navLinks = [
@@ -58,77 +42,24 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Data Scientist",
+    title: "Web Developer",
     icon: web,
   },
   {
-    title: "Python Developer",
+    title: "React Native Developer",
     icon: mobile,
   },
   {
-    title: "Machine Learning",
+    title: "Backend Developer",
     icon: backend,
   },
   {
-    title: "Artificial Intelligence",
+    title: "Content Creator",
     icon: creator,
   },
 ];
 
 const technologies = [
-  {
-    name: "Data Scientist",
-    icon: data,
-  },
-  {
-    name: "Machine Learning",
-    icon: machine,
-  },
-  {
-    name: "Artificial Intelligence",
-    icon: ai,
-  },
-  {
-    name: "Jupyter",
-    icon: jupyter,
-  },
-  {
-    name: "TesorFlow",
-    icon: tensorflow,
-  },
-  {
-    name: "Keras",
-    icon: keras,
-  },
-  {
-    name: "Scikit Learn",
-    icon: sckit,
-  },
-  {
-    name: "SQL",
-    icon: sql,
-  },
-  {
-    name: "LLM",
-    icon: llm,
-  },
-  {
-    name: "RAG",
-    icon: rag,
-  },
-  {
-    name: "Time Series Forecasting",
-    icon: time,
-  },
-  {
-    name: "Probability",
-    icon: prob,
-  },
-
-  {
-    name: "Snowflake",
-    icon: snowflake,
-  },
   {
     name: "HTML 5",
     icon: html,
@@ -142,56 +73,97 @@ const technologies = [
     icon: javascript,
   },
   {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
   {
     name: "Node JS",
     icon: nodejs,
   },
   {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
     name: "git",
     icon: git,
+  },
+  {
+    name: "figma",
+    icon: figma,
+  },
+  {
+    name: "docker",
+    icon: docker,
   },
 ];
 
 const experiences = [
   {
-    title: "Data Scientist Trainee",
-    company_name: "ExcelR",
-    icon: excel,
-    iconBg: "#E6DEDD",
-    date: "May 2024 - Present",
-    points: [
-      "Developed data-driven insights that boosted strategic decisionmaking, increasing operational efficiency by 15%",
-      "Implemented a data cleaning process that reduced errors by 20%, ensuring higher analysis accuracy",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Collaborated with marketing, finance, and product teams to deliver analytical solutions, contributing to a 10% business growth.",
-    ],
-  },
-  {
-    title: "Data Scientist Intern",
-    company_name: "Lead Height",
-    icon: lead,
+    title: "React.js Developer",
+    company_name: "Starbucks",
+    icon: starbucks,
     iconBg: "#383E56",
-    date: "Feb 2024 - Aug 2024",
+    date: "March 2020 - April 2021",
     points: [
-      "Collected, analyzed, and modeled data using statistical techniques and machine learning algorithms",
-      "Developed interactive dashboards and reports to communicate insights, optimizing processes and achieving cost savings",
-      "Worked with cross-functional teams to identify process improvement opportunities and implemented data-driven solutions",
-      "Optimized inventory management, reduced equipment downtime with predictive maintenance models, and received recognition for outstanding performance",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
-    title: "Full Stack Trainee",
-    company_name: "FunctionUP",
-    icon: functionup,
+    title: "React Native Developer",
+    company_name: "Tesla",
+    icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Mar 2022 - Oct 2022",
+    date: "Jan 2021 - Feb 2022",
     points: [
-      "Create and manage the marketing budget, ensuring efficient allocation of resources and optimizing ROI.",
-      "Oversee market research to identify emerging trends, customer needs, and competitor strategies.",
-      "Monitor brand consistency across marketing channels and materials",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Web Developer",
+    company_name: "Shopify",
+    icon: shopify,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Full stack Developer",
+    company_name: "Meta",
+    icon: meta,
+    iconBg: "#E6DEDD",
+    date: "Jan 2023 - Present",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
@@ -200,7 +172,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Juhaib proved me wrong.",
+      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
