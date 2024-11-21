@@ -1,18 +1,11 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { useRef, useEffect } from "react";
+import { useEffect } from "react";
 import * as THREE from "three";
 
 const ComputersCanvas = () => {
-  const canvasRef = useRef();
-
   useEffect(() => {
-    // Ensure the canvas exists before initializing Three.js
-    const canvas = canvasRef.current;
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-
-    // Scene Setup
+    // Basic Scene Setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -20,22 +13,44 @@ const ComputersCanvas = () => {
       0.1,
       1000
     );
-    camera.position.z = 5;
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
 
-    // Geometry Creation
+    // Geometry Creation with Validation
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array([
-      0.0, 1.0, 0.0, // Vertex 1
-      -1.0, -1.0, 0.0, // Vertex 2
-      1.0, -1.0, 0.0, // Vertex 3
+      // Valid vertices for a triangle
+      0.0, 1.0, 0.0,
+      -1.0, -1.0, 0.0,
+      1.0, -1.0, 0.0,
     ]);
-    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-    geometry.computeBoundingSphere();
 
-    // Material and Mesh
-    const material = new THREE.MeshBasicMaterial({ color: 0x915eff });
+    geometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(positions, 3)
+    );
+
+    // Validate geometry attributes
+    const positionArray = geometry.attributes.position.array;
+    console.assert(
+      !positionArray.some(isNaN),
+      "Position attribute contains NaN values."
+    );
+
+    // Compute bounding sphere and box
+    geometry.computeBoundingSphere();
+    geometry.computeBoundingBox();
+
+    // Create Material
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+
+    // Create Mesh
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
+
+    // Camera Position
+    camera.position.z = 5;
 
     // Animation Loop
     const animate = () => {
@@ -46,23 +61,14 @@ const ComputersCanvas = () => {
     };
     animate();
 
-    // Cleanup
+    // Cleanup on Component Unmount
     return () => {
+      document.body.removeChild(renderer.domElement);
       renderer.dispose();
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{
-        display: "block",
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-      }}
-    />
-  );
+  return null; // No JSX since Three.js manages the canvas directly
 };
 
 const Hero = () => {
