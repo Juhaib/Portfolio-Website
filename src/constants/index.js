@@ -23,6 +23,22 @@ import {
   jobit,
   tripguide,
   threejs,
+  excel,
+  lead,
+  functionup,
+  data,
+  tensorflow,
+  keras,
+  sckit,
+  jupyter,
+  ai,
+  machine,
+  sql,
+  llm,
+  time,
+  rag,
+  snowflake,
+  prob
 } from "../assets";
 
 export const navLinks = [
